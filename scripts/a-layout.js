@@ -2,20 +2,21 @@
 
 AFRAME.registerComponent('a-layout', {
     schema: {
-        shape:{type: 'string', default: 'grid'}, //grid, circle, line
+        shape:{type: 'string', default: 'circle'}, //grid, circle, line
         modifier:{type:'int', default:4}, // modifier will be radius if circle, and columns if grid
         items:{type:'array', default:[]},
-        spacer:{type:'int', default:1.5},
+        spacer:{type:'int', default:3},
         dur_lap:{type: 'int', default:240000}
     },
     init: function(){
         this.data.items = this.el.children;
+        this.setCircleLayout();
     },
     setCircleLayout : function(){
         let radius = this.data.modifier;
         let delta = 360/ this.data.items.length;
         for(i = 0; i < this.data.items.length; i++){
-            //rotation: imgs[i].object3D.rotateY(toRadians(180-(90-ang * -i)));
+            this.data.items[i].object3D.rotateY(toRadians(180-(90-delta * -i)));
             //let tween_rot = new AFRAME.TWEEN.Tween(imgs[i].object3D.rotation).to({y:toRadians(-(90-ang * -i))}, trans_lapse*2);
             //tween_rot.easing(TWEEN.Easing.Cubic.Out);
             //tween_rot.start();
@@ -28,7 +29,8 @@ AFRAME.registerComponent('a-layout', {
     },
     setGridLayout : function(){
         let cols = this.data.modifier;
-        let item_w, item_h = this.data.spacer;
+        let item_w = this.data.spacer; 
+        let item_h = this.data.spacer;
         let f =0, c = 0;
         for(i = 0; i < this.data.items.length; i++){
             this.data.items[i].object3D.position.set(c * item_w, f * item_h, 0);
@@ -42,6 +44,9 @@ AFRAME.registerComponent('a-layout', {
                 f++;
             }
         }
+    },
+    rotate : function(){
+
     }
 });
 

@@ -7,11 +7,21 @@
   <title>fsf-xr - wall</title>
   <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   <script src="scripts/change-color.js"></script>
+  <script src="scripts/a-layout.js"></script>
 </head>
 <body>
   <a-scene>
-    <a-box change-color position="3 1 -3" width="2" height="2" depth="2"></a-box>
+    <a-entity a-layout="">
+      <a-box change-color position="3 1 -3" width="2" height="2" depth="2"></a-box>
+      <a-box change-color position="3 1 -3" width="2" height="2" depth="2"></a-box>
+      <a-box change-color position="3 1 -3" width="2" height="2" depth="2"></a-box>
+      <a-box change-color="color1:#64ff00;color2:#ff0064" position="3 1 -3" width="2" height="2" depth="2"></a-box>
+      <a-box change-color position="3 1 -3" width="2" height="2" depth="2"></a-box>
+      <a-box change-color position="3 1 -3" width="2" height="2" depth="2"></a-box>
+      <a-box change-color position="3 1 -3" width="2" height="2" depth="2"></a-box>
+    </a-entity>
   </a-scene>
   
+
 </body>
 </html>

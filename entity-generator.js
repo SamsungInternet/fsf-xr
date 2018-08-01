@@ -9,7 +9,11 @@ AFRAME.registerComponent('entity-generator', {
     init: function(){
         for (i = 0; i < this.data.number_items; i++){
             let ne = document.createElement(this.data.entity_name);
-            ne.setAttribute('class', this.data.attributes);
+            atts = this.data.attributes.split('$');
+            for(a = 0; a < atts.length; a++){
+                att = atts[a].split('=');
+                att[1] != null?ne.setAttribute(att[0], att[1]):ne.setAttribute(att[0]);
+            }
             this.el.appendChild(ne);
             
         }

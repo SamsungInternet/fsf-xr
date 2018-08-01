@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>fsf-xr - wall</title>
   <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-  <script src="http://diekus.com/webxr-resources/aframe/components/change-color.js"></script>
-  <script src="http://diekus.com/webxr-resources/aframe/components/a-layout.js"></script>
   <script src="entity-generator.js"></script>
+  <script src="change-color.js"></script>
+  <script src="a-layout.js"></script>
 </head>
 <body>
+  
   <a-scene>
     <a-sky color="#3d3d3d"></a-sky>
-    <a-entity entity-generator="number_items:8;entity_name:a-box;">
+    <a-entity a-layout="animation:false;shape:grid" entity-generator="number_items:8;entity_name:a-box;">
     </a-entity>
   </a-scene>
-
 </body>
 </html>

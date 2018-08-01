@@ -3,15 +3,13 @@
 AFRAME.registerComponent('entity-generator', {
     schema: {
         entity_name:{type: 'string', default: 'a-entity'}, 
-        class:{type:'string', default:'eg-entity'}, 
+        attributes:{type:'string', default:''}, 
         number_items:{type:'int', default:2},
     },
     init: function(){
         for (i = 0; i < this.data.number_items; i++){
             let ne = document.createElement(this.data.entity_name);
-            for(a = 0; a < this.data.attributes.length; a++){
-                ne.setAttribute('class', this.data.class);
-            }
+            ne.setAttribute('class', this.data.attributes);
             this.el.appendChild(ne);
             
         }

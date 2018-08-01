@@ -11,10 +11,10 @@
   <script src="a-layout.js"></script>
 </head>
 <body>
-  
-  <a-scene>
-tion=0 2 -3$material=c    <a-sky color="#3d3d3d"></a-sky>
-    <a-entity a-layout="animation:false;shape:grid" entity-generator="number_items:200; entity_name:a-box; attributes:class=header$position=0 2 -3$material=color:#3d3d3d&transparent:true$change-color"></a-entity>
+    <a-scene>
+      <a-sky color="#3d3d3d"></a-sky>
+      <a-entity entity-generator="number_items:50; entity_name:a-box; attributes:change-color; id_generation:true" a-layout="shape:spiral; spiral_delta_v:0.05; animations:true; ">
+    </a-entity>
   </a-scene>
 </body>
 </html>

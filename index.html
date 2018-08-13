@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="entity-generator.js"></script>
+    <script src="change-color.js"></script>
+    <script src="a-layout.js"></script>
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
     
@@ -13,6 +16,12 @@
     <script src="/script.js" defer></script>
   </head>  
   <body>
-    lolo
+    <a-scene>
+      <a-assets>
+        <img src="imgs/bricks.jpg" id="bricks">
+      </a-assets>
+      <a-sky color="#3d3d3d"></a-sky>
+      <a-entity entity-generator="number_items:250; entity_name:a-box; attributes:change-color; id_generation:true" a-layout="shape:spiral; spiral_spins:10; spiral_delta_v:0.06; animations:true;" position="0 -3 0"></a-entity>
+  </a-scene>
   </body>
 </html>

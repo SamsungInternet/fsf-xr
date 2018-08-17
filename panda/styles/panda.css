@@ -22,7 +22,7 @@ a:link, a:visited, a:hover{
     flex-direction: row;
     flex-wrap: wrap;
     justify-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .foto{

@@ -50,7 +50,7 @@ a:link, a:visited, a:hover{
 }
 
 .peu{
-    margin: auto;
+    margin: 3em;
     text-align: center;
 }
 
@@ -60,6 +60,7 @@ a:link, a:visited, a:hover{
     position: absolute;
     max-width: 40vw;
 }
+
 
 @media(max-width:500px){
     .cantonada{

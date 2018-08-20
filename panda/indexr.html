@@ -7,6 +7,9 @@
     <script src="js/aframe.min.js"></script>
     <script src="js/a-layout.js"></script>
     <script src="js/pandaxr.js"></script>
+    
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
     <title>PandaPiXR :: El millor lloc per a fotos del teu panda amb realitat virtual</title>
 </head>
 <body>
@@ -47,10 +50,14 @@
         <!--controls-->
         <a-entity id="controls">
             <a-image src="./imgs/pp-logo.png" position="0 3 -3" width="1" height=".25"></a-image>
-            <a-image src="./imgs/arrow.png" class="btn" id="btnSeguent" position="0.4 0.9 -2.3" width=".4" height=".4"></a-image>
-            <a-image src="./imgs/arrow.png" class="btn" id="btnAnterior" position="-0.4 0.9 -2.3" width=".4" height=".4" rotation="0 0 180"></a-image>
+            <a-image src="./imgs/arrow.png" class="btn" id="btnSeguent" position="0.4 0.9 -2.3" width=".4" height=".4" clickable ></a-image>
+            <a-image src="./imgs/arrow.png" class="btn" id="btnAnterior" position="-0.4 0.9 -2.3" width=".4" height=".4" rotation="0 0 180" clickable ></a-image>
         </a-entity>
         <a-image src="./imgs/pis.png" width="7" height="7" rotation="-90 0 0" position="0 -.5 -1.1"></a-image>
+        
+        <a-entity sphere-collider="objects: a-box" super-hands hand-controls="left" raycaster="objects:.btn"></a-entity>
+        <a-entity sphere-collider="objects: a-box" super-hands hand-controls="right" raycaster="objects:.btn"></a-entity>
+        
     </a-scene>
 </body>
 </html>

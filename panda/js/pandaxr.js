@@ -16,7 +16,7 @@ let rotar = function(dir){
         nAngle = currentAngle + rotDelta;
     else
         nAngle = currentAngle - rotDelta;
-    let = tween_rot = new AFRAME.TWEEN.Tween(ui_layout.object3D.rotation).to({y:toRadians(nAngle)}, 250);
+    let tween_rot = new AFRAME.TWEEN.Tween(ui_layout.object3D.rotation).to({y:toRadians(nAngle)}, 250);
     tween_rot.easing(TWEEN.Easing.Cubic.Out);
     tween_rot.start();
 }

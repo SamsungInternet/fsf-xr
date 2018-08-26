@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>A-Frame basic setup</title>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
 </head>
 <body>
-    
+  <a-scene>
+      <a-sky color="#33334C"></a-sky>
+      <a-gltf-model src="models/lapa_hi.glb" position="0 1.5 -1">
+        <a-animation attribute="rotation"
+        dur="5000"
+        fill="forwards"
+        to="0 360 0"
+        repeat="indefinite"></a-animation>
+      </a-gltf-model>
+  </a-scene>    
 </body>
 </html>

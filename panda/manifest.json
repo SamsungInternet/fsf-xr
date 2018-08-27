@@ -14,7 +14,7 @@
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "start_url": "indexr.html",
+  "start_url": "./indexr.html",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#3d3d3d",

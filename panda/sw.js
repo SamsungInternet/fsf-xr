@@ -58,7 +58,7 @@ self.addEventListener('fetch', function(event) {
 
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['bubble-v1'];
+  var cacheWhitelist = ['pndpx-v1'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {

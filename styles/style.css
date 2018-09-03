@@ -46,12 +46,8 @@ h1, h2{
   margin:auto;
 }
 
-.city{
-  width: 100%;
-}
-
 .example-image{
-  width:10em ;
+  width:80% ;
   margin:auto;
   padding:1em;
 }

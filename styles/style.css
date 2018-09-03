@@ -12,7 +12,7 @@ body{
   background-image: url('../imgs/fsf-bg.gif');
   background-repeat: repeat-x;
   background-position: center bottom;
-  background-size: 60%;
+  background-size: 40%;
 }
 
 h1, h2{
@@ -38,7 +38,7 @@ h1, h2{
 }
 
 .header{
-  
+  text-align: center;
 }
 
 .page-area{

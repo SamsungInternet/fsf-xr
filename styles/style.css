@@ -1,6 +1,7 @@
 :root{
   --bg-color:#A6B3C5;
   --light-color: rgba(216, 222, 231, .5);
+  --text-color: #313B4D;
 }
 
 body{
@@ -8,7 +9,10 @@ body{
   color:#313B4D;
   font-family: 'Source Code Pro',monospace,sans-serif;
   margin:0px;
-  min-height: 98vh;
+  background-image: url('../imgs/fsf-bg.gif');
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  background-size: 60%;
 }
 
 h1, h2{
@@ -49,4 +53,21 @@ h1, h2{
 .example-image{
   width:10em ;
   margin:auto;
+  padding:1em;
+}
+
+.btnFormat{
+  padding: .5em;
+  margin: 1em;
+  border: var(--text-color) solid 2px;
+  border-radius: 8px;
+  display: block;
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1.5em;
+}
+
+.footer{
+  margin: 3em auto 15em auto;
+  text-align: center;
 }

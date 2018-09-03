@@ -71,3 +71,10 @@ h1, h2{
   margin: 3em auto 15em auto;
   text-align: center;
 }
+
+@media (max-width: 600px){
+  .content{
+    display: grid;
+    grid-template-columns:1fr;
+  }
+}
